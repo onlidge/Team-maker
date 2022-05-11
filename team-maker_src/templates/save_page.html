@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<style>
+   body {
+    background-image: url('/static/Images/Castle.png')
+   }
+</style>
+<head>
+    <a href="/">
+        <img src='/static/Images/Icon_Castle.png'>
+    </a>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>KGC_Team_Maker</title>
+</head>
+<body>
+    <style>
+        h1{
+            background-image: url('/static/Images/Button_Expedition.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 160px;
+            height: 40px;
+            position: center;
+        }
+    </style>
+    <h1 align="center">Save</h1>
+    <div align="center">
+        <style>
+            div {
+                background-image: url('/static/Images/Stand1.png');
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+        </style>
+        {% for el in team_list %}
+            <a href={{ el.href_1 }}>
+                <img src={{ el.image }}>
+            </a>
+        {% endfor %}
+    </div>
+    <form method="post">
+        <div align="center">
+            <input type="text" name="name" id="name" placeholder="name">
+        </div>
+    </form>
+</body>
+</html>
