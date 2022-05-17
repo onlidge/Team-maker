@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<style>
+   body {
+    background-image: url('/static/Images/Castle.png')
+   }
+</style>
+<head>
+    <a href="/">
+        <img src='/static/Images/Icon_Castle.png'>
+    </a>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>KGC_Team_Maker</title>
+</head>
+<body>
+    <style>
+        h2{
+            background-image: url('/static/Images/Button_Expedition.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 160px;
+            height: 40px;
+            position: center;
+        }
+    </style>
+    <h2 align="center">{{ hero_name }}</h2>
+    <div align="center">
+        <style>
+            h1 {
+                background-image: url('/static/Images/Stand_solo.png');
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+        </style>
+        <h1>
+            <img src={{ barraks_list.image }}>
+        </h1>
+    </div>
+    <div align="center">
+        {% for el in hero_list %}
+            <a href={{ el.href_1 }}>
+                <img src={{ el.image }}>
+            </a>
+        {% endfor %}
+    </div>
+</body>
+</html>

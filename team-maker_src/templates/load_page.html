@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<style>
+   body {
+    background-image: url('/static/Images/Castle.png')
+   }
+</style>
+<head>
+    <a href="/">
+        <img src='/static/Images/Icon_Castle.png'>
+    </a>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>KGC_Team_Maker</title>
+</head>
+<body>
+    <style>
+        h2{
+            background-image: url('/static/Images/Button_Expedition.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 160px;
+            height: 40px;
+            position: center;
+        }
+    </style>
+    <h2 align="center">Import</h2>
+    <div align="center">
+        <style>
+            div {
+                background-image: url('/static/Images/Stand1.png');
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+        </style>
+    </div>
+    <form method="post">
+        <div align="center">
+            Import by code
+            <input type="text" name="code" id="code" placeholder="code">
+        </div>
+    </form>
+    <p align="center">
+        Your saves:
+        {% for el in saves %}
+            <h1 style="border: 3px black double" align="center">
+                <a href={{ el.code }}>
+                    {{ el.name }}
+                </a>
+                <p>
+                    code: {{ el.code }}
+                </p>
+            </h1>
+        {% endfor %}
+    </p>
+</body>
+</html>
